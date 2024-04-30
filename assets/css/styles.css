@@ -1,0 +1,645 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+/* Genéricos */
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #131822;
+}
+
+.title {
+  color: #F8F7F3;
+  font-family: "Cabin", sans-serif;
+}
+
+.text {
+  color: #ACA7A7;
+  font-family: "Quicksand", sans-serif;
+}
+
+.contrast {
+  color: #15AAFF;
+  text-decoration: none;
+}
+
+section {
+  padding-top: 6rem;
+  height: 90rem;
+}
+
+.section-title {
+  color: #F8F7F3;
+  font-family: "Cabin", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.displayNone {
+  display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #15AAFF;
+  border-radius: 10px;
+}
+
+/* Navigation Bar */
+#navlist {
+  display: flex;
+  flex-direction: row;
+  gap: 180px;
+  list-style-type: none;
+  font-size: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#navlist button {
+  font-size: 2.5rem;
+  height: 3.4rem;
+  background: none;
+  margin-top: 0.6rem;
+  color: #F8F7F3;
+  font-family: "Cabin", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+}
+
+#name {
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+.navbarBefore {
+  width: 100%;
+  height: 9rem;
+  position: fixed;
+  border: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  z-index: 1000;
+  transition: 1s;
+}
+
+.navbarAfter {
+  box-shadow: 1px 2px 5px #15AAFF;
+  background: #131822;
+}
+
+#sidebar {
+  display: none;
+}
+
+#name-mobile {
+  display: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+/* Section 1 - About */
+#about {
+  padding-top: 110px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#about li::marker {
+  color: #15AAFF;
+}
+#about h1 {
+  font-size: 6rem;
+}
+#about .margin-about li {
+  margin-bottom: 1.2rem;
+}
+#about .margin-about #contacts-row {
+  margin-top: 12rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+#about .margin-about #contacts-row .contact-icons {
+  width: 20rem;
+  height: 12rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#about .margin-about #contacts-row .contact-icons a {
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #F8F7F3;
+  font-size: 16px;
+  font-family: "Cabin", sans-serif;
+}
+#about .margin-about #contacts-row .contact-icons a p {
+  color: #ACA7A7;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px !important;
+  margin-top: 1rem !important;
+}
+#about .margin-about #contacts-row .contact-icons a .contact-icons a svg {
+  margin-bottom: 2rem;
+}
+#about #backlogo {
+  width: 60rem;
+  height: 60rem;
+  margin: 4rem 0 0 6%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* Section 2 - Experiences */
+#experiences {
+  background-color: #171e2b;
+  display: flex;
+  flex-direction: column;
+}
+#experiences .experience {
+  display: flex;
+  flex-direction: row;
+}
+#experiences .exp-description {
+  background-color: #131822;
+  padding: 2rem;
+  border-radius: 15px;
+  align-items: center;
+  margin: 0 3% 0 3%;
+}
+#experiences .exp-description div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#experiences .exp-description h2 {
+  color: #F8F7F3;
+  font-family: "Cabin", sans-serif;
+}
+#experiences .exp-description h1 {
+  color: #F8F7F3;
+  font-family: "Cabin", sans-serif;
+}
+#experiences .exp-description p {
+  margin-top: 1.5rem;
+  color: #ACA7A7;
+  font-family: "Quicksand", sans-serif;
+}
+#experiences .company-logo {
+  background-color: #F8F7F3;
+  border-radius: 100px;
+  border-width: 3px;
+  border: solid #ACA7A7;
+  height: 72.5%;
+  margin-top: 2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#experiences .company-logo img {
+  height: 12rem;
+  width: 12rem;
+}
+
+/* Section 3 - Skills */
+#skills {
+  background-color: #131822;
+  padding-bottom: 6rem;
+}
+#skills .skill-icons .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #171e2b;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  height: 16rem;
+}
+#skills .skill-icons .card .skill-icon {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 10px;
+}
+
+/* Section 4 - Projects */
+#projects {
+  background-color: #171e2b;
+}
+#projects .projects {
+  display: grid;
+  justify-content: center;
+  margin-top: 9rem;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 4rem;
+  width: 80%;
+}
+#projects .projects .project-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 4rem;
+  overflow: hidden;
+  background-color: #131822;
+  border: #15AAFF solid;
+  box-shadow: #15AAFF 0 0 15px;
+  border-width: 1px;
+}
+#projects .projects .project-card h1 {
+  padding-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+#projects .projects .project-card svg {
+  background-color: #171e2b;
+  padding: 1.2rem;
+  width: 30px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+#modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #131822;
+  padding: 20px 20px 40px 20px;
+  text-align: center;
+  height: auto;
+  border-radius: 15px;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 2px 2px 5px black;
+}
+#modal .modal-content h1 {
+  margin-bottom: 2.5rem;
+}
+#modal .modal-content svg {
+  background-color: #171e2b;
+  padding: 1.2rem;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#modal .modal-content img {
+  width: 80%;
+  margin-top: 4rem;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+/* Footer */
+#footer {
+  height: 6rem;
+  width: 100%;
+  bottom: 0;
+  background-color: #131822;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#footer p {
+  color: #F8F7F3;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (min-width: 1451px) {
+  .experience {
+    margin: 4rem 12.5% 4rem 12.5%;
+  }
+  .exp-description {
+    width: 75%;
+  }
+  .exp-description p {
+    font-size: 2rem;
+  }
+  .exp-description h1 {
+    font-size: 2.4rem;
+  }
+  .exp-description h2 {
+    font-size: 1.5rem;
+  }
+  .skill-icons {
+    margin: 9rem 15% 0 15%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 30rem 30rem 30rem 30rem;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .skill-icons h1 {
+    font-size: 2.2rem;
+  }
+  .margin-about {
+    margin: 10% 0 0 10%;
+  }
+  .margin-about ul {
+    margin: 3rem 0 0 3rem;
+    font-size: 2rem;
+  }
+  .margin-about #contacts-row {
+    margin-left: -4rem;
+  }
+  .projects {
+    grid-template-columns: 25% 25% 25%;
+  }
+  .project-card {
+    height: 52rem;
+  }
+  .project-card h1 {
+    font-size: 3rem;
+  }
+  .project-card p {
+    font-size: 1.5rem;
+  }
+  .modal-content {
+    width: 40%;
+  }
+}
+@media (max-width: 1450px) {
+  section {
+    height: auto;
+    padding-bottom: 5rem;
+  }
+  #backlogo {
+    display: none;
+  }
+  #navlist {
+    gap: 100px;
+  }
+  #navlist button {
+    font-size: 2rem;
+  }
+  .experience {
+    margin: 8rem 12.5% 0 12.5%;
+  }
+  .exp-description {
+    width: 75%;
+  }
+  .exp-description p {
+    font-size: 1.6rem;
+  }
+  .exp-description h1 {
+    font-size: 1.8rem;
+  }
+  .exp-description h2 {
+    font-size: 1.2rem;
+  }
+  .skill-icons {
+    margin: 9rem 15% 0 15%;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 30rem 30rem 30rem;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .skill-icons h1 {
+    font-size: 2.2rem;
+  }
+  .margin-about {
+    margin: 10% 0 0 10%;
+  }
+  .margin-about ul {
+    margin: 3rem 0 0 3rem;
+    font-size: 2rem;
+  }
+  .projects {
+    grid-template-columns: 35% 35%;
+  }
+  .project-card {
+    height: 52rem;
+  }
+  .project-card h1 {
+    font-size: 3rem;
+  }
+  .project-card p {
+    font-size: 1.5rem;
+  }
+  .modal-content {
+    width: 40%;
+  }
+}
+@media (max-width: 1100px) {
+  #navlist {
+    gap: 80px;
+  }
+  #navlist button {
+    font-size: 1.7rem;
+  }
+  #navlist p {
+    font-size: 3.2rem;
+  }
+  .contact-icons p {
+    display: none;
+  }
+  .margin-about {
+    margin: 10% 5% 0 5%;
+    width: 90%;
+    text-align: center;
+  }
+  .margin-about ul {
+    margin: 3rem 0 0 0;
+  }
+  .margin-about li {
+    list-style-type: none;
+  }
+  .skill-icons {
+    margin: 9rem 8% 0 8%;
+    width: 84%;
+    display: grid;
+    grid-template-columns: 25rem 25rem;
+    justify-content: center;
+  }
+  .skill-icons h1 {
+    font-size: 1.8rem;
+  }
+  .modal-content {
+    width: 60%;
+  }
+}
+@media (max-width: 950px) {
+  #navlist {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: -150%;
+    left: 0;
+    text-align: center;
+    background-color: #131822;
+    box-shadow: 0 -7px 5px -5px #15AAFF;
+    gap: 50px;
+    transition: 0.5s;
+  }
+  #navlist li:first-child {
+    margin-top: 10%;
+  }
+  #list-name {
+    display: none;
+  }
+  #check:checked ~ ul {
+    top: 8.8rem;
+    transition: 0.5s;
+  }
+  .experience {
+    margin: 8rem 8% 0 8%;
+  }
+  .experience img {
+    display: none;
+  }
+  .experience .company-logo {
+    display: none;
+  }
+  .experience .exp-description {
+    width: 100%;
+  }
+  #contacts-row {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .contact-icons svg {
+    width: 35px;
+  }
+  .navbarBefore {
+    background-color: #131822;
+  }
+  .navbarBefore div {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbarBefore div #sidebar {
+    display: block;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    height: 4rem;
+  }
+  .navbarBefore div #name-mobile {
+    display: block;
+  }
+  .projects {
+    grid-template-columns: 60%;
+  }
+}
+@media (max-width: 680px) {
+  .skill-icons {
+    margin: 9rem 8% 0 8%;
+    width: 84%;
+    display: grid;
+    grid-template-columns: 20rem 20rem;
+    justify-content: center;
+  }
+  #name-mobile {
+    text-align: center;
+  }
+  .projects {
+    grid-template-columns: 80%;
+  }
+}
+@media (max-width: 480px) {
+  #name-mobile {
+    font-size: 3rem;
+  }
+  #contacts-row {
+    margin-bottom: 2rem;
+  }
+  .experience {
+    margin-bottom: 4rem;
+  }
+  .skill-icons {
+    grid-template-columns: 27rem;
+  }
+  #footer p {
+    font-size: 1.25rem;
+  }
+  .project-card {
+    padding-top: 25px;
+    height: auto;
+  }
+  .project-card .row {
+    display: none;
+  }
+  .project-card h1 {
+    font-size: 2rem;
+  }
+  .project-card p {
+    font-size: 1.2rem;
+  }
+  .modal-content {
+    width: 80%;
+  }
+}/*# sourceMappingURL=styles.css.map */

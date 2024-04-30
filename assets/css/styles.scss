@@ -1,0 +1,747 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+$blue: #15AAFF;
+$dark1: #131822;
+$dark2: #171e2b;
+$white: #F8F7F3;
+$grey: #ACA7A7;
+
+/* Genéricos */
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark1;
+}
+
+.title {
+    color: $white;
+    font-family: 'Cabin', sans-serif;
+}
+
+.text {
+    color: $grey;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contrast {
+    color: $blue;
+    text-decoration: none;
+}
+
+section {
+    padding-top: 6rem;
+    height: 90rem;
+}
+
+.section-title {
+    color: $white;
+    font-family: 'Cabin', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.displayNone {
+    display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 10px;
+}
+
+/* Navigation Bar */
+#navlist {
+    display: flex;
+    flex-direction: row;
+    gap: 180px;
+    list-style-type: none;
+    font-size: 2.5rem;
+    user-select: none;
+
+    button {
+        font-size: 2.5rem;
+        height: 3.4rem;
+        background: none;
+        margin-top: 0.6rem;
+        color: $white;
+        font-family: 'Cabin', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: none;
+        border: none;
+    }
+}
+
+#name {
+    font-family: "Quicksand", sans-serif;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+.navbarBefore {
+    width: 100%;
+    height: 9rem;
+    position: fixed;
+    border: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    z-index: 1000;
+    transition: 1s;
+}
+
+.navbarAfter {
+    box-shadow: 1px 2px 5px $blue;
+    background: $dark1;
+}
+
+#sidebar {
+    display: none;
+}
+
+#name-mobile {
+    display: none;
+    font-family: "Quicksand", sans-serif;
+    font-weight: lighter;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+/* Section 1 - About */
+#about {
+    padding-top: 110px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    li::marker {
+        color: $blue;
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    .margin-about {
+        li {
+            margin-bottom: 1.2rem;
+        }
+
+        #contacts-row {
+            margin-top: 12rem;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+
+            .contact-icons {
+                width: 20rem;
+                height: 12rem;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    margin-top: 1rem;
+                    text-align: center;
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 16px;
+                    font-family: "Cabin", sans-serif;
+
+                    p {
+                        color: $grey;
+                        font-family: "Quicksand", sans-serif;
+                        font-size: 16px !important;
+                        margin-top: 1rem !important;
+                    }
+
+                    .contact-icons a svg {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #backlogo {
+        width: 60rem;
+        height: 60rem;
+        margin: 4rem 0 0 6%;
+        user-select: none;
+    }
+}
+
+/* Section 2 - Experiences */
+#experiences {
+    background-color: $dark2;
+    display: flex;
+    flex-direction: column;
+
+    .experience {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .exp-description {
+        background-color: $dark1;
+        padding: 2rem;
+        border-radius: 15px;
+        align-items: center;
+        margin: 0 3% 0 3%;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        h2 {
+            color: $white;
+            font-family: 'Cabin', sans-serif;
+        }
+
+        h1 {
+            color: $white;
+            font-family: 'Cabin', sans-serif;
+        }
+
+        p {
+            margin-top: 1.5rem;
+            color: $grey;
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+
+    .company-logo {
+        background-color: $white;
+        border-radius: 100px;
+        border-width: 3px;
+        border: solid $grey;
+        height: 72.5%;
+        margin-top: 2rem;
+        cursor: pointer;
+        user-select: none;
+
+        img {
+            height: 12rem;
+            width: 12rem;
+        }
+    }
+}
+
+/* Section 3 - Skills */
+#skills {
+    background-color: $dark1;
+    padding-bottom: 6rem;
+
+    .skill-icons {
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: $dark2;
+            border-radius: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            height: 16rem;
+
+            .skill-icon {
+                width: 5rem;
+                height: 5rem;
+                margin: 0 auto 10px;
+            }
+        }
+    }
+}
+
+/* Section 4 - Projects */
+#projects {
+    background-color: $dark2;
+
+    .projects {
+        display: grid;
+        justify-content: center;
+        margin-top: 9rem;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 4rem;
+        width: 80%;
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-sizing: border-box;
+            padding: 4rem;
+            overflow: hidden;
+            background-color: $dark1;
+            border: $blue solid;
+            box-shadow: $blue 0 0 15px;
+            border-width: 1px;
+
+            h1 {
+                padding-top: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            svg {
+                background-color: $dark2;
+                padding: 1.2rem;
+                width: 30px;
+                border-radius: 100%;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* Modal */
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $dark1;
+        padding: 20px 20px 40px 20px;
+        text-align: center;
+        height: auto;
+        border-radius: 15px;
+        border-width: 1px;
+        border-color: black;
+        box-shadow: 2px 2px 5px black;
+
+        h1 {
+            margin-bottom: 2.5rem;
+        }
+
+        svg {
+            background-color: $dark2;
+            padding: 1.2rem;
+            width: 40px;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+
+        img {
+            width: 80%;
+            margin-top: 4rem;
+            border-radius: 15px;
+            opacity: 0.9;
+        }
+    }
+}
+
+/* Footer */
+#footer {
+    height: 6rem;
+    width: 100%;
+    bottom: 0;
+    background-color: $dark1;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    p {
+        color: $white;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+}
+
+/* Responsividade */
+@media (min-width: 1451px) {
+    .experience {
+        margin: 4rem 12.5% 4rem 12.5%;
+    }
+
+    .exp-description {
+        width: 75%;
+
+        p {
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .skill-icons {
+        margin: 9rem 15% 0 15%;
+        width: 70%;
+        display: grid;
+        grid-template-columns: 30rem 30rem 30rem 30rem;
+        justify-content: center;
+        gap: 4rem;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+
+    .margin-about {
+        margin: 10% 0 0 10%;
+
+        ul {
+            margin: 3rem 0 0 3rem;
+            font-size: 2rem;
+        }
+
+        #contacts-row {
+            margin-left: -4rem;
+        }
+    }
+
+    .projects {
+        grid-template-columns: 25% 25% 25%;
+    }
+
+    .project-card {
+        height: 52rem;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .modal-content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1450px) {
+    section {
+        height: auto;
+        padding-bottom: 5rem;
+    }
+
+    #backlogo {
+        display: none;
+    }
+
+    #navlist {
+        gap: 100px;
+
+        button {
+            font-size: 2rem;
+        }
+    }
+
+    .experience {
+        margin: 8rem 12.5% 0 12.5%;
+    }
+
+    .exp-description {
+        width: 75%;
+
+        p {
+            font-size: 1.6rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+
+    .skill-icons {
+        margin: 9rem 15% 0 15%;
+        width: 70%;
+        display: grid;
+        grid-template-columns: 30rem 30rem 30rem;
+        justify-content: center;
+        gap: 4rem;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+
+    .margin-about {
+        margin: 10% 0 0 10%;
+
+        ul {
+            margin: 3rem 0 0 3rem;
+            font-size: 2rem;
+        }
+    }
+
+    .projects {
+        grid-template-columns: 35% 35%;
+    }
+
+    .project-card {
+        height: 52rem;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .modal-content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1100px) {
+    #navlist {
+        gap: 80px;
+
+        button {
+            font-size: 1.7rem;
+        }
+
+        p {
+            font-size: 3.2rem;
+        }
+    }
+
+    .contact-icons p {
+        display: none;
+    }
+
+    .margin-about {
+        margin: 10% 5% 0 5%;
+        width: 90%;
+        text-align: center;
+
+        ul {
+            margin: 3rem 0 0 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+    .skill-icons {
+        margin: 9rem 8% 0 8%;
+        width: 84%;
+        display: grid;
+        grid-template-columns: 25rem 25rem;
+        justify-content: center;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .modal-content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 950px) {
+    #navlist {
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: -150%;
+        left: 0;
+        text-align: center;
+        background-color: $dark1;
+        box-shadow: 0 -7px 5px -5px $blue;
+        gap: 50px;
+        transition: 0.5s;
+    }
+
+    #navlist li:first-child {
+        margin-top: 10%;
+    }
+    #list-name {
+        display: none;
+    }
+
+    #check:checked ~ ul {
+        top: 8.8rem;
+        transition: 0.5s;
+    }
+
+    .experience {
+        margin: 8rem 8% 0 8%;
+
+        img {
+            display: none;
+        }
+
+        .company-logo {
+            display: none;
+        }
+
+        .exp-description {
+            width: 100%;
+        }
+    }
+
+    #contacts-row {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .contact-icons {
+        svg {
+            width: 35px;
+        }
+    }
+
+    .navbarBefore {
+        background-color: $dark1;
+        div {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            #sidebar {
+                display: block;
+                background-color: transparent;
+                box-shadow: none;
+                border: none;
+                cursor: pointer;
+                height: 4rem;
+            }
+    
+            #name-mobile {
+                display: block;
+            }
+        }
+    }
+
+    .projects {
+        grid-template-columns: 60%;
+    }
+}
+
+@media (max-width: 680px) {
+    .skill-icons {
+        margin: 9rem 8% 0 8%;
+        width: 84%;
+        display: grid;
+        grid-template-columns: 20rem 20rem;
+        justify-content: center;
+    }
+
+    #name-mobile {
+        text-align: center;
+    }
+
+    .projects {
+        grid-template-columns: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    #name-mobile {
+        font-size: 3rem;
+    }
+
+    #contacts-row {
+        margin-bottom: 2rem;
+    }
+
+    .experience {
+        margin-bottom: 4rem;
+    }
+
+    .skill-icons {
+        grid-template-columns: 27rem;
+    }
+
+    #footer p {
+        font-size: 1.25rem;
+    }
+
+    .project-card {
+        padding-top: 25px;
+        height: auto;
+        .row {
+            display: none;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}
