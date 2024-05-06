@@ -453,7 +453,9 @@ section {
     }
 
     .projects {
-        grid-template-columns: 25% 25% 25%;
+        //Para quando adicionar um novo projeto
+        //grid-template-columns: 25% 25% 25%;
+        grid-template-columns: 25% 25%;
     }
 
     .project-card {
