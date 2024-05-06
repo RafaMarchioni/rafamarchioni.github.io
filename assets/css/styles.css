@@ -410,7 +410,7 @@ section {
     margin-left: -4rem;
   }
   .projects {
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 25% 25%;
   }
   .project-card {
     height: 52rem;
