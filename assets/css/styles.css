@@ -154,11 +154,19 @@ section {
 #about h1 {
   font-size: 6rem;
 }
-#about .margin-about li {
-  margin-bottom: 1.2rem;
+#about .margin-about .description {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #F8F7F3;
+  font-family: "Quicksand", sans-serif;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #0078ff;
+  animation: typing 3s steps(40) forwards, blink 0.8s infinite;
+  transition: opacity 0.3s ease-in-out;
 }
 #about .margin-about #contacts-row {
-  margin-top: 12rem;
+  margin-top: 18rem;
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -277,15 +285,16 @@ section {
 /* Section 4 - Projects */
 #projects {
   background-color: #171e2b;
+  height: auto;
 }
 #projects .projects {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 50px;
   justify-content: center;
-  margin-top: 9rem;
-  margin-left: auto;
-  margin-right: auto;
-  gap: 4rem;
-  width: 80%;
+  align-items: stretch;
+  margin: 0 12.5%;
+  padding: 3% 0;
 }
 #projects .projects .project-card {
   display: flex;
@@ -313,7 +322,7 @@ section {
 }
 
 /* Modal */
-#modal {
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -322,7 +331,7 @@ section {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
-#modal .modal-content {
+.modal .modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -336,17 +345,17 @@ section {
   border-color: black;
   box-shadow: 2px 2px 5px black;
 }
-#modal .modal-content h1 {
+.modal .modal-content h1 {
   margin-bottom: 2.5rem;
 }
-#modal .modal-content svg {
+.modal .modal-content svg {
   background-color: #171e2b;
   padding: 1.2rem;
   width: 40px;
   border-radius: 100%;
   margin-right: 10px;
 }
-#modal .modal-content img {
+.modal .modal-content img {
   width: 80%;
   margin-top: 4rem;
   border-radius: 15px;
@@ -371,6 +380,20 @@ section {
   font-weight: bold;
 }
 
+/* Animações */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 92.5%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 /* Responsividade */
 @media (min-width: 1451px) {
   .experience {
@@ -402,15 +425,8 @@ section {
   .margin-about {
     margin: 10% 0 0 10%;
   }
-  .margin-about ul {
-    margin: 3rem 0 0 3rem;
-    font-size: 2rem;
-  }
   .margin-about #contacts-row {
     margin-left: -4rem;
-  }
-  .projects {
-    grid-template-columns: 25% 25%;
   }
   .project-card {
     height: 52rem;
@@ -471,9 +487,6 @@ section {
   .margin-about ul {
     margin: 3rem 0 0 3rem;
     font-size: 2rem;
-  }
-  .projects {
-    grid-template-columns: 35% 35%;
   }
   .project-card {
     height: 52rem;
@@ -550,6 +563,12 @@ section {
     top: 8.8rem;
     transition: 0.5s;
   }
+  #about .margin-about .description {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+    text-align: center;
+  }
   .experience {
     margin: 8rem 8% 0 8%;
   }
@@ -591,9 +610,6 @@ section {
   .navbarBefore div #name-mobile {
     display: block;
   }
-  .projects {
-    grid-template-columns: 60%;
-  }
 }
 @media (max-width: 680px) {
   .skill-icons {
@@ -605,9 +621,6 @@ section {
   }
   #name-mobile {
     text-align: center;
-  }
-  .projects {
-    grid-template-columns: 80%;
   }
 }
 @media (max-width: 480px) {

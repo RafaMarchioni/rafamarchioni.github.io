@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
     companies.forEach(function (company) {
         company.addEventListener('click', function () {
             let link = this.getAttribute('data-link');
+            if (link == NULL) {
+                return 1;
+            }
             window.open(link, '_blank');
         });
     });
@@ -65,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.project-card');
 
     cards.forEach(function (card) {
-        if (card.id === 'catalogo') {
+        if (card.id != 'pim') {
             return 1;
         }
         card.addEventListener('click', function () {
@@ -75,17 +78,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//Modal Catálogo
+//Modais
 document.addEventListener('DOMContentLoaded', function () {
-    const catalogo = document.getElementById('catalogo');
-    const modal = document.getElementById('modal');
+    const gestiona = document.getElementById('gestiona');
+    const modalGestiona = document.getElementById('modal-gestiona');
 
-    catalogo.addEventListener('click', function () {
-        modal.style.display = "block";
+    const fornecedor = document.getElementById('fornecedor');
+    const modalFornecedor = document.getElementById('modal-fornecedor');
+
+    const catalogo = document.getElementById('catalogo');
+    const modalCatalogo = document.getElementById('modal-catalogo');
+
+    gestiona.addEventListener('click', function () {
+        modalGestiona.style.display = "block";
     })
 
-    modal.addEventListener('click', function () {
-        modal.style.display = "none";
+    modalGestiona.addEventListener('click', function () {
+        modalGestiona.style.display = "none";
+    })
+
+    fornecedor.addEventListener('click', function () {
+        modalFornecedor.style.display = "block";
+    })
+
+    modalFornecedor.addEventListener('click', function () {
+        modalFornecedor.style.display = "none";
+    })
+
+    catalogo.addEventListener('click', function () {
+        modalCatalogo.style.display = "block";
+    })
+
+    modalCatalogo.addEventListener('click', function () {
+        modalCatalogo.style.display = "none";
     })
 });
 
@@ -99,7 +124,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-//Sections Mobile
-function Sidebar() {
+//Typing Animation
+document.addEventListener('DOMContentLoaded', function () {
+    const description = document.querySelector('.description');
 
-}
+    function startTypingAnimation() {
+        description.style.animation = 'typing 3s steps(40) forwards, blink 0.8s infinite';
+        description.style.borderRight = '2px solid #15AAFF';
+        description.style.opacity = '1';
+    }
+
+    function stopTypingAnimation() {
+        description.style.animation = 'none';
+        description.style.borderRight = 'none';
+        description.style.opacity = '0';
+    }
+
+    function toggleTypingAnimation() {
+        startTypingAnimation();
+        setTimeout(stopTypingAnimation, 4000);
+        setTimeout(startTypingAnimation, 4500);
+    }
+
+    setInterval(toggleTypingAnimation, 8000);
+});
