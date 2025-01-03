@@ -126,25 +126,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Typing Animation
 document.addEventListener('DOMContentLoaded', function () {
-    const description = document.querySelector('.description');
+    if (window.innerWidth > 950) {
+        const description = document.querySelector('.description');
 
-    function startTypingAnimation() {
-        description.style.animation = 'typing 3s steps(40) forwards, blink 0.8s infinite';
-        description.style.borderRight = '2px solid #15AAFF';
-        description.style.opacity = '1';
+        function startTypingAnimation() {
+            description.style.animation = 'typing 3s steps(40) forwards, blink 0.8s infinite';
+            description.style.borderRight = '2px solid #15AAFF';
+            description.style.opacity = '1';
+        }
+
+        function stopTypingAnimation() {
+            description.style.animation = 'none';
+            description.style.borderRight = 'none';
+            description.style.opacity = '0';
+        }
+
+        function toggleTypingAnimation() {
+            startTypingAnimation();
+            setTimeout(stopTypingAnimation, 4000);
+            setTimeout(startTypingAnimation, 4500);
+        }
+
+        setInterval(toggleTypingAnimation, 8000);
     }
-
-    function stopTypingAnimation() {
-        description.style.animation = 'none';
-        description.style.borderRight = 'none';
-        description.style.opacity = '0';
-    }
-
-    function toggleTypingAnimation() {
-        startTypingAnimation();
-        setTimeout(stopTypingAnimation, 4000);
-        setTimeout(startTypingAnimation, 4500);
-    }
-
-    setInterval(toggleTypingAnimation, 8000);
 });
