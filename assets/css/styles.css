@@ -15,6 +15,10 @@ body {
   background-color: #131822;
 }
 
+.hidden-lang {
+  display: none !important;
+}
+
 .title {
   color: #F8F7F3;
   font-family: "Cabin", sans-serif;
@@ -97,6 +101,16 @@ section {
   box-shadow: none;
   border: none;
 }
+#navlist #lang-toggle {
+  background: none;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 
 #name {
   font-family: "Quicksand", sans-serif;
@@ -159,11 +173,14 @@ section {
   font-size: 2rem;
   color: #F8F7F3;
   font-family: "Quicksand", sans-serif;
+  vertical-align: bottom;
+}
+#about .margin-about .description span {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #0078ff;
-  animation: typing 3s steps(40) forwards, blink 0.8s infinite;
-  transition: opacity 0.3s ease-in-out;
+  display: inline-block;
 }
 #about .margin-about #contacts-row {
   margin-top: 18rem;
@@ -214,6 +231,7 @@ section {
 #experiences .experience {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 #experiences .exp-description {
   background-color: #131822;
@@ -245,8 +263,7 @@ section {
   border-radius: 100px;
   border-width: 3px;
   border: solid #ACA7A7;
-  height: 72.5%;
-  margin-top: 2rem;
+  height: 12rem;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -386,10 +403,13 @@ section {
     width: 0;
   }
   to {
-    width: 92.5%;
+    width: 100%;
   }
 }
 @keyframes blink {
+  0%, 100% {
+    border-color: #15AAFF;
+  }
   50% {
     border-color: transparent;
   }
@@ -501,7 +521,7 @@ section {
     width: 40%;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1190px) {
   #navlist {
     gap: 80px;
   }
@@ -539,7 +559,7 @@ section {
     width: 60%;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
   #navlist {
     flex-direction: column;
     position: fixed;
